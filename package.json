@@ -1,7 +1,7 @@
 {
-	"name": "luamin",
-	"version": "1.0.4",
-	"description": "A Lua minifier written in JavaScript",
+	"name": "fivem-luamin",
+	"version": "1.0.0",
+	"description": "A Lua minifier written in JavaScript (Modified for FiveM Lua 5.4",
 	"homepage": "https://mths.be/luamin",
 	"main": "luamin.js",
 	"bin": "bin/luamin",
@@ -12,8 +12,8 @@
 	],
 	"license": "MIT",
 	"author": {
-		"name": "Mathias Bynens",
-		"url": "https://mathiasbynens.be/"
+		"name": "Mathias Bynens & Modified by Sh4dow <discord:danskebank>",
+		"url": "https://mathiasbynens.be/ & https://sh4dow.dev"
 	},
 	"repository": {
 		"type": "git",
@@ -35,7 +35,7 @@
 		"test": "node tests/tests.js"
 	},
 	"dependencies": {
-		"luaparse": "^0.2.1"
+		"fivem-luaparse": "^1.0.0"
 	},
 	"devDependencies": {
 		"grunt": "^0.4.4",
