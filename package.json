@@ -37,7 +37,7 @@
 		"test": "node tests/tests.js"
 	},
 	"dependencies": {
-		"fivem-luaparse": "^1.0.3"
+		"fivem-luaparse": "^1.0.4"
 	},
 	"devDependencies": {
 		"grunt": "^1.6.1",
