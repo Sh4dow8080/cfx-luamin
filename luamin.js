@@ -40,6 +40,7 @@
 		"~=": 3,
 		"==": 3,
 		"..": 5,
+		"?.": 5,
 		"+": 6,
 		"-": 6, // binary -
 		"*": 7,
@@ -552,7 +553,7 @@
 					}
 				});
 			}
-		} else if (statementType == "LocalInStatement") {
+		} else if (statementType == "LocalOperatorStatement") {
 			result = "local ";
 
 			// left-hand side
@@ -566,7 +567,8 @@
 
 			// right-hand side
 			if (statement.init.length) {
-				result += " in ";
+				if (statement.operator == "in") result += " in ";
+				else result += statement.operator;
 				each(statement.init, function (init, needsComma) {
 					result += formatExpression(init);
 					if (needsComma) {

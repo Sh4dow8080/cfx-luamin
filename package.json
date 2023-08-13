@@ -23,9 +23,11 @@
 	"files": [
 		"LICENSE-MIT.txt",
 		"luamin.js",
+		"typings.d.ts",
 		"bin/",
 		"man/"
 	],
+	"types": "typings.d.ts",
 	"directories": {
 		"bin": "bin",
 		"man": "man",
