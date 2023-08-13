@@ -480,7 +480,7 @@
 				} else if (field.type == "TableValue") {
 					result += formatExpression(field.value);
 				} else if (field.type == "TableSetValue") {
-					result += "."+formatExpression(field.value);
+					result += "." + formatExpression(field.value);
 				} else if (field.type == "TableKeyString") {
 					result +=
 						formatExpression(field.key, {
@@ -528,6 +528,23 @@
 
 			// right-hand side
 			result += "=";
+			each(statement.init, function (init, needsComma) {
+				result += formatExpression(init);
+				if (needsComma) {
+					result += ",";
+				}
+			});
+		} else if (statementType == "CompoundAssignmentStatement") {
+			// left-hand side
+			each(statement.variables, function (variable, needsComma) {
+				result += formatExpression(variable);
+				if (needsComma) {
+					result += ",";
+				}
+			});
+
+			// right-hand side
+			result += statement.operator;
 			each(statement.init, function (init, needsComma) {
 				result += formatExpression(init);
 				if (needsComma) {
