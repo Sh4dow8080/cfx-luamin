@@ -1,6 +1,6 @@
 {
 	"name": "fivem-luamin",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "A Lua minifier written in JavaScript (Modified for FiveM Lua 5.4",
 	"homepage": "https://mths.be/luamin",
 	"main": "luamin.js",
