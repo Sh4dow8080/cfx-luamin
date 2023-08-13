@@ -1,6 +1,6 @@
 {
 	"name": "fivem-luamin",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A Lua minifier written in JavaScript (Modified for FiveM Lua 5.4",
 	"homepage": "https://mths.be/luamin",
 	"main": "luamin.js",
@@ -37,7 +37,7 @@
 		"test": "node tests/tests.js"
 	},
 	"dependencies": {
-		"fivem-luaparse": "^1.0.2"
+		"fivem-luaparse": "^1.0.3"
 	},
 	"devDependencies": {
 		"grunt": "^1.6.1",
