@@ -479,8 +479,9 @@
 						formatExpression(field.value);
 				} else if (field.type == "TableValue") {
 					result += formatExpression(field.value);
-				} else {
-					// at this point, `field.type == 'TableKeyString'`
+				} else if (field.type == "TableSetValue") {
+					result += "."+formatExpression(field.value);
+				} else if (field.type == "TableKeyString") {
 					result +=
 						formatExpression(field.key, {
 							// TODO: keep track of nested scopes (#18)
@@ -488,6 +489,8 @@
 						}) +
 						"=" +
 						formatExpression(field.value);
+				} else {
+					throw TypeError("Unknown table field type: `" + field.type + "`");
 				}
 				if (needsComma) {
 					result += ",";
